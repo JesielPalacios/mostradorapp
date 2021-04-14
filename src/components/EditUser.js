@@ -5,7 +5,7 @@ import { Form } from "./Form";
 export const EditUser = () => {
     const {id} = useParams();
 
-    const [editing, setEditing] = useState(true)
+    const [editing, setditing] = useState(true)
 
     useEffect(() => {
         const llamaDatos = async() => {
@@ -30,17 +30,19 @@ export const EditUser = () => {
             ...datos,
             [event.target.name] : event.target.value
         })
+        console.log(datos);
     }
 
     const onSubmit = (event) => {
         event.preventDefault();
-        event.target.reset();
+        // event.target.reset();
         console.log('enviando datos... ' + datos.id + ' ' + datos.name + ' ' + datos.salary);
 
         const enviaDatos = (datos) => {
                 fetch(`http://localhost:3001/api/user/${id}`, {
                 method: 'PUT',
-                body: datos
+                body: JSON.stringify(datos)
+
             }).then(res => res.json()).then(data => console.log(data))
         }
 

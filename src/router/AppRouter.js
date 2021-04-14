@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Navbar } from "../components/shared/Navbar";
 import { App } from "../App";
 import { NotFound } from "../Pages/NotFound";
-// import { Footer } from "../components/shared/Footer";
+import { Footer } from "../components/shared/Footer";
 import { User } from "../components/User";
 import { Users } from "../Pages/Users";
 import { AddUser } from "../components/AddUser";
@@ -22,7 +22,7 @@ export const AppRouter = () => {
           <Route path="/editar/:id" component={EditUser} />
           <Route component={NotFound} />
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </div>
   )

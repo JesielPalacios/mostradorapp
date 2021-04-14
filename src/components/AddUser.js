@@ -28,7 +28,11 @@ export const AddUser = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(datos)
-            }).then(res => res.json()).then(data => console.log(data))
+            })
+            .then(res => res.json())
+            // .then(data => console.log(data))
+            .then(response => console.log('Success:', JSON.stringify(response)))
+            .catch(error => console.error('Error:',error))
         }
 
         enviaDatos()
