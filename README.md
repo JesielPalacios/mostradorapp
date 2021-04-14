@@ -1,6 +1,6 @@
 # MostradorApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cliente Fron-End para modificar datos de usuarios mediante CRUD de los empleados de una empresa.
 
 # Getting Started with Create React App
 
